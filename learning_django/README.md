@@ -9,7 +9,7 @@ Introduction to Django developing a project called wisdompets
 You can clone all the repo with the following command:
 
 ```Shell
-    git clone --depth 1 ...
+    git clone --depth 1 https://github.com/oimoralest/django.git
 ```
 
 Next go to the wisdompets project using the following command:
@@ -24,13 +24,25 @@ Install the requeriments with the following command:
     pip3 install -r requeriments.txt
 ```
 
-Run the the server with the following command:
+Apply migrations running the following commands:
+
+```Shell
+    python3 manage.py migrate
+```
+
+You can add some data to the database running the following command:
+
+```Shell
+    python3 manage.py load_pet_data
+```
+
+Finally, run the the server with the following command:
 
 ```Shell
     python3 manage.py runserver
 ```
 
-Finally, you can go, using your favorite web browser, to the following URL and enjoy the app:
+Now you can use your favorite web browser and visit to the following URL to enjoy the app:
 
 <http://localhost:8000/>
 
@@ -44,9 +56,13 @@ To create a superuser run the following command and fill the requested informati
     python3 manage.py createsuperuser
 ```
 
+Run the server and go to the following URL and make use of admin tools:
+
+<http://localhost:8000/admin>
+
 ## Learned concepts
 
-### Models and admin
+### Models and Admin
 
 In this section I learned to:
 
@@ -105,7 +121,7 @@ To use the Django shell we run the following command:
 
 This will run the python shell with DJANGO_SETTINGS_MODULE enviroment variable
 
-#### References
+#### References for Models and Admin
 
 - [MVC Architecture](https://www.guru99.com/mvc-tutorial.html)
 - [Models](https://docs.djangoproject.com/en/3.2/topics/db/models/)
@@ -113,3 +129,18 @@ This will run the python shell with DJANGO_SETTINGS_MODULE enviroment variable
 - [Custom django-admin command](https://docs.djangoproject.com/en/3.2/howto/custom-management-commands/)
 - [Admin site](https://docs.djangoproject.com/en/3.2/ref/contrib/admin/)
 - [Making queries](https://docs.djangoproject.com/en/3.2/topics/db/queries/)
+
+### URL Handlers and Views
+
+In this section I learned to:
+
+- Implement a view for a specific endpoint
+
+#### Implemented URLs
+
+- Home: <http://localhost:8000/>
+- Pet detail: <http:/localhost:8000/adoptions/<int:pet_id>>
+
+#### References for URL Handlers and Views
+
+- [URL configs](https://docs.djangoproject.com/en/3.2/topics/http/urls/)
