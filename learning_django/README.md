@@ -70,6 +70,7 @@ In this section I learned to:
 - Makemigrations, migrate and showmigrations
 - Use admin site
 - Make queries
+- Use "Django" Shell
 
 #### Implemented Models
 
@@ -139,8 +140,25 @@ In this section I learned to:
 #### Implemented URLs
 
 - Home: <http://localhost:8000/>
-- Pet detail: <http:/localhost:8000/adoptions/<int:pet_id>>
+- Pet detail: <http:/localhost:8000/adoptions/pet_id>
 
 #### References for URL Handlers and Views
 
 - [URL configs](https://docs.djangoproject.com/en/3.2/topics/http/urls/)
+
+### Templates
+
+In this section I learned:
+
+- Render HTML files with django
+- Templates inheritance
+
+#### Implemented templates
+
+- base.html: Base html where htmls file inherits from
+- home.html: Home page
+- pet_detail.html: Detailed pet information page
+
+#### References for Templates
+
+- [Templates](https://docs.djangoproject.com/en/3.2/topics/templates/)
